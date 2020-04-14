@@ -13,8 +13,9 @@
                     <h1>Contact me</h1>
                     <div class="post-content">
                         <p>You can contact me using the following form :)</p>
-                        <form id="fh5co_contact_form">
-                            <p>
+                        <form id="fh5co_contact_form" method="POST">
+                            {% csrf_token %}
+                            <!-- <p>
                                 <input type="text" name="name" value="" size="40" placeholder="Name*">
                             </p>
                             <p>
@@ -22,7 +23,8 @@
                             </p>
                             <p>
                                 <textarea name="message" cols="40" rows="10" placeholder="Your Message"></textarea>
-                            </p>
+                            </p> -->
+                            {{ form.as_p }}
                             <p class="form-submit"><input type="submit" value="Send"></p>
                         </form>
                     </div>

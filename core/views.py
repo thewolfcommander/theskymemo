@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .forms import ContactForm
 
 
 def home(request):
@@ -13,7 +15,20 @@ def blog(request):
 
 
 def contact(request):
-    return render(request, 'core/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST or None)
+        if form.is_valid():
+            contact = form.save(commit=False)
+            contact.ip_address = '127.0.0.1'
+            contact.save()
+            return redirect('core:home')
+        
+    else:
+        form = ContactForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'core/contact.html', context)
 
 
 def single(request):
