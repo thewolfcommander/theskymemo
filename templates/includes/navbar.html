@@ -1,0 +1,70 @@
+{% load static %}
+<header class="header">
+
+    <div class="header-wrap">
+
+        <div class="logo plain logo-left">
+            <div class="site-title">
+                <a href="{% url 'core:home' %}" title="Go to Home">The SKY</a>
+            </div>
+        </div><!-- /logo -->
+
+
+        <nav id="nav" role="navigation">
+            <div class="table">
+                <div class="table-cell">
+                    <ul id="menu-menu-1">
+                        <li class="menu-item">
+                            <a href="{% url 'core:home' %}">Home</a></li>
+                        <li class="menu-item">
+                            <a href="{% url 'core:about' %}">About me</a></li>
+                        <li class="menu-item">
+                            <a href="#">Dropdown</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="#">Cute</a></li>
+                                <li class="menu-item">
+                                    <a href="#">Fun</a></li>
+                                <li class="menu-item">
+                                    <a href="#">Fitness</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{% url 'core:blog' %}">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="{% url 'core:single' %}">Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{% url 'core:typography' %}">Typography</a></li>
+                        <li class="menu-item">
+                            <a href="{% url 'core:contact' %}">Contact me</a></li>
+                        <li class="menu-inline menu-item">
+                            <a title="Twitter" href="http://twitter.com/Rightbros1">
+                                <i class="fa fa-twitter"></i><span class="i">Twitter</span>
+                            </a></li>
+                        <li class="menu-inline menu-item">
+                            <a title="Facebook" href="http://www.facebook.com/Rightbros">
+                                <i class="fa fa-facebook"></i><span class="i">Facebook</span>
+                            </a></li>
+                        <li class="menu-inline menu-item">
+                            <a title="Flickr" href="#"><i class="fa fa-flickr"></i><span class="i">Flickr</span></a>
+                        </li>
+                        <li class="menu-inline menu-item">
+                            <a title="Instagram" href="https://instagram.com/the.monu.tyagi/">
+                                <i class="fa fa-instagram"></i><span class="i">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <a href="#nav" class="menu-trigger"><i class="fa fa-bars"></i></a>
+
+        <a href="#topsearch" class="search-trigger"><i class="fa fa-search"></i></a>
+
+    </div>
+
+</header>
